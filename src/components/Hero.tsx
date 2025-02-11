@@ -12,28 +12,25 @@ import "swiper/css/navigation";
 
 const slides = [
   {
-    title:
-      "Unlock high-paying career opportunities with expert-led SAP training",
+    title: "Acquire Expertise That Drives Innovation",
     subtitle:
-      "Learn at your own pace with interactive courses, hands-on projects, and real-world case studies.",
+      "Unlock your potential with expert-led SAP training from Golden Pearl Consulting. Our comprehensive courses and certification programs equip you with the skills to streamline business processes and drive innovation across your organization",
     bgImage: "/images/ImgBg4.JPG",
     overlayPosition: "center", // Set to "center" for the first slide
     overlayColor: "from-black-600/60",
   },
   {
-    title:
-      "Take your career to the next level with industry-leading SAP training ",
+    title: "Enhance Your SAP Skills & Accelerate Your Career ",
     subtitle:
-      "Gain in-demand SAP skills with our industry-focused e-learning platform. Flexible, interactive, and designed for success—learn from anywhere, anytime!",
+      "Master data management and SAP best practices with our flexible, expert-led online courses. Gain hands-on experience with the latest tools, collaborate in an interactive learning environment, and upskill at your own pace.",
     bgImage: "/images/ImgBg3.JPG",
     overlayPosition: "center", // Set to "center"
     overlayColor: "from-black-600/60",
   },
   {
-    title:
-      "Master SAP with ease through our structured, beginner-friendly, and expert-led courses.",
+    title: "Master SAP & Unlock New Career Opportunities",
     subtitle:
-      "Whether you're a beginner or an expert, our step-by-step SAP courses help you master the skills top companies are looking for. Learn at your pace, on your terms!",
+      "Stay ahead in the digital era with expert-led SAP training designed for professionals at all levels. Our flexible online courses provide hands-on experience, real-world case studies, and industry-recognized certifications to help you boost efficiency and drive innovation.",
     bgImage: "/images/ImgBg6.jpeg",
     overlayPosition: "center", // Already set to "center"
     overlayColor: "from-black-400/40",
@@ -50,7 +47,7 @@ const Hero = () => {
   }, [swiperInstance]);
 
   return (
-    <div className="h-screen w-full mt-10">
+    <div className="h-screen w-full mt-[64px]">
       <style jsx global>{`
         /* Hide navigation buttons on smaller screens */
         @media (max-width: 768px) {
@@ -114,7 +111,7 @@ const Hero = () => {
                   className="object-cover"
                 />
                 {/* Overlays */}
-                <div className="absolute inset-0 bg-black/70" />
+                <div className="absolute inset-0 bg-black/60" />
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${
                     slide.overlayPosition === "left"
@@ -137,7 +134,7 @@ const Hero = () => {
                   <p className="text-xl sm:text-2xl font-inter leading-[34.8px] text-white/90 mb-8">
                     {slide.subtitle}
                   </p>
-                  <button className="bg-blue-500 mt-8 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-600 transition-colors">
+                  <button className="bg-blue-600 mt-8 text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition-colors">
                     Start Learning Now
                   </button>
                 </div>
