@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useState } from "react";
+import { Plus, Minus } from "lucide-react";
 
 interface FAQ {
   category: string;
@@ -122,21 +122,11 @@ const FAQSection: React.FC = () => {
               <h3 className="text-xl font-semibold font-inter text-gray-800">
                 {category.category}
               </h3>
-              <svg
-                className={`w-5 h-5 transition-transform duration-200 ${
-                  activeCategories[categoryIndex] ? "rotate-180" : ""
-                }`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              {activeCategories[categoryIndex] ? (
+                <Minus className="w-5 h-5 text-gray-600" />
+              ) : (
+                <Plus className="w-5 h-5 text-gray-600" />
+              )}
             </button>
 
             <div
@@ -155,23 +145,11 @@ const FAQSection: React.FC = () => {
                     <h4 className="text-lg font-medium font-inter text-gray-700">
                       {item.question}
                     </h4>
-                    <svg
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        activeQuestions[`${categoryIndex}-${questionIndex}`]
-                          ? "rotate-180"
-                          : ""
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                    {activeQuestions[`${categoryIndex}-${questionIndex}`] ? (
+                      <Minus className="w-4 h-4 text-gray-600" />
+                    ) : (
+                      <Plus className="w-4 h-4 text-gray-600" />
+                    )}
                   </button>
 
                   <div
