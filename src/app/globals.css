@@ -2,20 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+/* styles/globals.css */
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Bold.woff") format("woff"),
+    url("/fonts/Gilroy-Bold.ttf") format("truetype"); /* as a fallback */
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --swiper-theme-color: white !important;
+  --swiper-navigation-color: white !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: rgba(0, 0, 0, 0) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: opacity 0.3s ease !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+  color: white !important;
+}
+
+.swiper-pagination-white .swiper-pagination-bullet {
+  background-color: white !important;
+}
+
+.swiper-pagination-white .swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet {
+  width: 14px !important; /* Default is around 8px */
+  height: 14px !important;
+  background: white !important; /* Ensures visibility */
+  opacity: 1 !important;
+}
+
+/* Make active bullet larger */
+.swiper-pagination-bullet-active {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+@media (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
