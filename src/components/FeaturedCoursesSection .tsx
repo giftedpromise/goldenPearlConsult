@@ -1,18 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-// Update Swiper imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import Link from "next/link";
-
-// Import Swiper types
-import type { Swiper as SwiperType } from "swiper";
 
 const FeaturedCoursesSection = () => {
   const courses = [
@@ -24,7 +19,7 @@ const FeaturedCoursesSection = () => {
       instructor: "John Doe",
       rating: 4.7,
       price: "$99.99",
-      image: "/images/courseImg9.jpeg", // Replace with your image path
+      image: "/images/courseImg9.jpeg",
     },
     {
       id: 2,
@@ -34,7 +29,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Jane Smith",
       rating: 4.8,
       price: "$129.99",
-      image: "/images/courseImg2.jpeg", // Replace with your image path
+      image: "/images/courseImg2.jpeg",
     },
     {
       id: 3,
@@ -43,7 +38,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg3.jpeg", // Replace with your image path
+      image: "/images/courseImg3.jpeg",
     },
     {
       id: 4,
@@ -53,7 +48,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg10.JPG", // Replace with your image path
+      image: "/images/courseImg10.JPG",
     },
     {
       id: 5,
@@ -63,7 +58,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg5.jpeg", // Replace with your image path
+      image: "/images/courseImg5.jpeg",
     },
     {
       id: 6,
@@ -72,7 +67,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg6.jpeg", // Replace with your image path
+      image: "/images/courseImg6.jpeg",
     },
     {
       id: 7,
@@ -82,7 +77,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg4.jpeg", // Replace with your image path
+      image: "/images/courseImg4.jpeg",
     },
     {
       id: 8,
@@ -91,7 +86,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg8.jpeg", // Replace with your image path
+      image: "/images/courseImg8.jpeg",
     },
     {
       id: 9,
@@ -101,7 +96,7 @@ const FeaturedCoursesSection = () => {
       instructor: "Mike Johnson",
       rating: 4.6,
       price: "$149.99",
-      image: "/images/courseImg1.jpeg", // Replace with your image path
+      image: "/images/courseImg1.jpeg",
     },
   ];
 
@@ -124,8 +119,9 @@ const FeaturedCoursesSection = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl text-[18px] font-medium mx-auto font-inter">
             Explore our most popular SAP courses designed to help you master
-            in-demand skills and advance your career. Whether you're a beginner
-            or an experienced professional, we have something for everyone.
+            in-demand skills and advance your career. Whether you&apos;re a
+            beginner or an experienced professional, we have something for
+            everyone.
           </p>
         </div>
 
