@@ -116,7 +116,7 @@ const FeaturedCoursesSection = () => {
   }, []);
 
   return (
-    <section className="py-[64px] bg-[#f3fafd] lg:px-[80px] md:px-10 px-4">
+    <section className="py-[64px] bg-[#F3FAFD] lg:px-[80px] md:px-10 px-4">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="font-[Gilroy-Bold] md:text-[56px] font-bold text-center mb-8">

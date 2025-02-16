@@ -24,11 +24,11 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/images/logo.png"
                 alt="Leeds Institute"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
+                width={500} // Increase the width
+                height={82} // Increase the height
+                className="h-20 w-auto"
               />
             </Link>
           </div>
@@ -96,7 +96,7 @@ const Header = () => {
               ))}
               <Link
                 href="/get-started"
-                className="block w-full text-center bg-blue-500 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-600 transition-colors"
+                className="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started
