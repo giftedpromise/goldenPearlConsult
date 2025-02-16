@@ -1,7 +1,6 @@
-import React from "react";
 import Hero from "@/components/Hero";
 import Link from "next/link";
-import FeaturedCoursesSection from "@/components/FeaturedCoursesSection ";
+import FeaturedCoursesSection from "@/components/FeaturedCoursesSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import PricingPlansSection from "@/components/PricingPlansSection";
 import FAQSection from "@/components/FAQSection";
@@ -13,6 +12,8 @@ const page = () => {
       <FeaturedCoursesSection />
       <WhyChooseUsSection />
       <PricingPlansSection />
+
+      {/* Hero Section with Background Image */}
       <section
         className="relative min-h-[600px] bg-cover bg-center bg-no-repeat"
         style={{
@@ -30,21 +31,25 @@ const page = () => {
             {/* Engaging Paragraph */}
             <p className="text-lg md:text-xl font-inter lg:text-2xl mb-8">
               Join thousands of professionals who have transformed their careers
-              with our industry-leading SAP courses. Whether you're a beginner
-              or an experienced professional, we provide the tools, knowledge,
-              and support to help you succeed in the competitive world of SAP.
+              with our industry-leading SAP courses. Whether you&apos;re a
+              beginner or an experienced professional, we provide the tools,
+              knowledge, and support to help you succeed in the competitive
+              world of SAP.
             </p>
 
             {/* Call-to-Action Button */}
             <Link
               href="/enroll"
               className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+              aria-label="Enroll in SAP courses"
             >
               Enroll Now and Start Your Journey
             </Link>
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
       <div className="min-h-screen bg-gray-50 py-[80px]">
         <FAQSection />
       </div>
