@@ -96,7 +96,7 @@ const Header = () => {
               ))}
               <Link
                 href="/get-started"
-                className="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
+                className="block w-[210px] text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

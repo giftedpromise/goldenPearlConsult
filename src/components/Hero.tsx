@@ -82,7 +82,7 @@ const Hero = () => {
         spaceBetween={0}
         slidesPerView={1}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
