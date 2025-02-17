@@ -47,7 +47,7 @@ const Hero = () => {
   }, [swiperInstance]);
 
   return (
-    <div className="h-screen w-full mt-[64px]">
+    <div className="h-screen w-full mt-[64px] overflow-x-hidden">
       <style jsx global>{`
         /* Hide navigation buttons on smaller screens */
         @media (max-width: 768px) {

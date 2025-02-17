@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -29,6 +28,7 @@ const Header = () => {
                 width={500} // Increase the width
                 height={82} // Increase the height
                 className="h-20 w-auto"
+                priority
               />
             </Link>
           </div>
@@ -61,7 +61,10 @@ const Header = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen((prev) => !prev);
+                console.log("Menu Open:", !isMenuOpen);
+              }}
               className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
             >
               {isMenuOpen ? (
@@ -78,12 +81,13 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden bg-white"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-6 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -96,7 +100,7 @@ const Header = () => {
               ))}
               <Link
                 href="/get-started"
-                className="block w-[210px] text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
+                className="block w-52 text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

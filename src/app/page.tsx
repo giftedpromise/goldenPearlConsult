@@ -7,7 +7,7 @@ import FAQSection from "@/components/FAQSection";
 
 const page = () => {
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <Hero />
       <FeaturedCoursesSection />
       <WhyChooseUsSection />
@@ -43,7 +43,7 @@ const page = () => {
               className="inline-block bg-blue-600 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
               aria-label="Enroll in SAP courses"
             >
-              Enroll Now and Start Your Journey
+              Enroll Now
             </Link>
           </div>
         </div>
