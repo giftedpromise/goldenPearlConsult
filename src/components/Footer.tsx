@@ -8,9 +8,9 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-[80px] lg:px-[80px] md:px-10 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-5 place-items-center gap-8">
           {/* Logo and Social Icons */}
-          <div className="md:col-span-1 flex flex-col items-center md:items-start">
+          <div className="md:col-span-1 flex flex-col items-center">
             <div className="flex-shrink-0 mb-4">
               <Link href="/" className="flex items-center">
                 <Image
@@ -113,33 +113,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter Section */}
-          <div>
-            <h3 className="font-bold mb-4">Newsletter</h3>
-            <p>
-              Join Our Learning Community. Sign up to receive the latest updates
-              on new courses, live classes, and events.
-            </p>
-            <form className="mt-4">
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="p-2 rounded text-black w-[200px]"
-              />
-              <button
-                type="submit"
-                className="bg-blue-600 p-2 w-[200px] rounded  mt-4"
-              >
-                Subscribe Now
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center mt-8">
-          <p>© 2024 Golden Pearl Consulting. All rights reserved.</p>
+        <div className="text-center  mt-12">
+          <p className="text-[14px] font-inter">
+            © 2024 Golden Pearl Consulting. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

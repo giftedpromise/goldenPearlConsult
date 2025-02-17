@@ -82,7 +82,7 @@ const Hero = () => {
         spaceBetween={0}
         slidesPerView={1}
         autoplay={{
-          delay: 2000,
+          delay: 1000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -111,7 +111,7 @@ const Hero = () => {
                   className="object-cover"
                 />
                 {/* Overlays */}
-                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-black/80" />
                 <div
                   className={`absolute inset-0 bg-gradient-to-r ${
                     slide.overlayPosition === "left"

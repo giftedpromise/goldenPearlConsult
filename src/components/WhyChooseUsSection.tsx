@@ -79,7 +79,7 @@ const WhyChooseUsSection = () => {
           {usps.map((usp, index) => (
             <motion.div
               key={usp.id}
-              className="text-center bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg"
+              className="text-center bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-sm"
               initial="offscreen"
               whileInView="onscreen"
               viewport={{ once: true, amount: 0.5 }}

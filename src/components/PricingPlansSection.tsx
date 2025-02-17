@@ -58,7 +58,9 @@ const PricingPlansSection = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-[Gilroy-Bold] md:text-[56px] font-bold mb-4">Pricing Plans</h2>
+          <h2 className="text-3xl font-[Gilroy-Bold] md:text-[56px] font-bold mb-4">
+            Pricing Plans
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Choose the plan that best fits your learning needs and budget.
           </p>
@@ -69,13 +71,13 @@ const PricingPlansSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.id}
-              className={`bg-white p-8 rounded-lg shadow-lg text-center ${
+              className={`bg-white p-8 rounded-lg shadow-sm text-center ${
                 plan.isRecommended ? "border-2 border-blue-600" : ""
               }`}
             >
               {/* Recommended Badge */}
               {plan.isRecommended && (
-                <div className="bg-blue-600 text-white py-1 px-4 rounded-full inline-block mb-4">
+                <div className="bg-blue-600 text-white py-1 px-4 rounded-lg inline-block mb-4">
                   Recommended
                 </div>
               )}

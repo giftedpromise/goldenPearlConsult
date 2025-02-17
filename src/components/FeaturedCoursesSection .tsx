@@ -156,7 +156,7 @@ const FeaturedCoursesSection = () => {
             >
               {courses.map((course) => (
                 <SwiperSlide key={course.id}>
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                     <div className="w-full h-48 relative">
                       <Image
                         src={course.image}
