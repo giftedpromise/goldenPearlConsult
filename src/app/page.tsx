@@ -4,16 +4,25 @@ import FeaturedCoursesSection from "@/components/FeaturedCoursesSection ";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import PricingPlansSection from "@/components/PricingPlansSection";
 import FAQSection from "@/components/FAQSection";
+import TrainingMode from "@/components/TrainingMode";
+import TestimonialSection from "@/components/TestimonialSection";
 
 const page = () => {
   return (
     <section className="overflow-x-hidden">
       <Hero />
+      <TrainingMode />
       <FeaturedCoursesSection />
       <WhyChooseUsSection />
+      <TestimonialSection />
       <PricingPlansSection />
 
       {/* Hero Section with Background Image */}
+
+      {/* FAQ Section */}
+      <div className="min-h-screen bg-gray-50 py-[80px]">
+        <FAQSection />
+      </div>
       <section
         className="relative min-h-[600px] bg-cover bg-center bg-no-repeat"
         style={{
@@ -48,11 +57,6 @@ const page = () => {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <div className="min-h-screen bg-gray-50 py-[80px]">
-        <FAQSection />
-      </div>
     </section>
   );
 };

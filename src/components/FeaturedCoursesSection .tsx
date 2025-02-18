@@ -10,92 +10,147 @@ import Image from "next/image";
 import Link from "next/link";
 
 const FeaturedCoursesSection = () => {
-  const courses = [
+  interface Course {
+    id: number;
+    title: string;
+    description: string[];
+    rating: number;
+    price: string;
+    image: string;
+    instructor?: string;
+  }
+
+  const courses: Course[] = [
     {
       id: 1,
-      title: "SAP FICO Training",
-      description:
-        "Learn the fundamentals of SAP Financial Accounting and Controlling.",
-      instructor: "John Doe",
+      title: "SAP FI Configuration",
+
+      description: [
+        "Hands on Configuration",
+        "Self-Paced Learning",
+        "Scenario Based Configuration.",
+      ],
       rating: 4.7,
-      price: "$99.99",
+      price: "$500",
       image: "/images/courseImg9.jpeg",
     },
     {
       id: 2,
-      title: "SAP MM BootCamp",
-      description:
-        "Master SAP programming and develop custom SAP applications.",
-      instructor: "Jane Smith",
+      title: "SAP CO Configuration",
+      description: [
+        "Hands on Configuration in Controlling",
+        "Basic Product Costing Exposure",
+        "Self-Paced Learning",
+      ],
+
       rating: 4.8,
-      price: "$129.99",
+      price: "$500",
       image: "/images/courseImg2.jpeg",
     },
     {
       id: 3,
-      title: "SAP Assessment Challenge",
-      description: "Evaluate your proficiency in SAP systems and modules.",
-      instructor: "Mike Johnson",
+      title: "SAP Product Costing",
+      description: [
+        "Extensive Product Costing Scenario",
+        "Extensive Product Costing Configuration",
+        "Self-Paced Learning",
+        "BOM-Bill Of Material Overview",
+        "Reports in Product Costing",
+      ],
       rating: 4.6,
-      price: "$149.99",
-      image: "/images/courseImg3.jpeg",
+      price: "$500",
+      image: "/images/SapProduct.PNG",
     },
     {
       id: 4,
-      title: "Mortgage Underwriter Course",
-      description:
-        "Gain the skills to evaluate loan applications and assess financial risk.",
-      instructor: "Mike Johnson",
+      title: "SAP Project Systems",
+      description: [
+        "Scenario Based Configuration.",
+        "End to End Configuration",
+        "End to End Project Creation",
+        "Self-Paced Learning",
+        "Configuration Document",
+      ],
+
       rating: 4.6,
-      price: "$149.99",
-      image: "/images/courseImg10.JPG",
+      price: "$499",
+      image: "/images/SAPProject.jpg",
     },
     {
       id: 5,
-      title: "SAP Strategy",
-      description:
-        "Learn SAP integration, automation, analytics, and best practices.",
-      instructor: "Mike Johnson",
+      title: "SAP Intercompay",
+      description: [
+        "Scenario Based Configuration.",
+        "Transfer Pricing/Markup",
+        "Stock Transfer Order (STO)",
+        "Contract Maufacturing Scenario",
+        "EDI/IDOC AP/AR document",
+        "Inter-company Reconcilation Configuration",
+        "3-Legs Intercompany Scenario",
+        "Self-Paced Learning",
+      ],
+
       rating: 4.6,
-      price: "$149.99",
-      image: "/images/courseImg5.jpeg",
+      price: "$699",
+      image: "/images/SAPintercompany.jpg",
     },
     {
       id: 6,
-      title: "SAP BootCamp Training",
-      description: "Get hands-on experience with SAP database and analytics.",
-      instructor: "Mike Johnson",
+      title: "SAP Market Class",
+      description: [
+        "The class is tailored for consultants with hands-on experiece in configuring S4 Financial (FI) and Management Accounting (CO) modules",
+        "Key Business Process",
+        "Project and Assignments",
+        "Contract Maufacturing Scenario",
+        "Interview Preparation",
+        "Live Classes",
+        "Project Documents(Real-life)",
+      ],
+
       rating: 4.6,
-      price: "$149.99",
-      image: "/images/courseImg6.jpeg",
+      price: "$700",
+      image: "/images/SAPMarket.jpg",
     },
     {
       id: 7,
-      title: "Starter Free SAP Course",
-      description:
-        "Kickstart your SAP journey with our free beginner-friendly course.",
-      instructor: "Mike Johnson",
+      title: "SAP Job Strategy",
+      description: [
+        "The class covers a comprehensive career supportp package to elevate your professional presence and interview readiness",
+        "Professionally Written Resume ",
+        "LinkedIn Profile Assistance",
+        "Interview Coaching Sessions",
+        "On the Job Continous Orientation for the first three months of starting the job",
+        "SAP Community with about 400 seasoned experts in SAP",
+        "Project Documents(Real-life)",
+      ],
       rating: 4.6,
-      price: "$149.99",
-      image: "/images/courseImg4.jpeg",
+      price: "$999",
+      image: "/images/SAPJob.jpg",
     },
     {
       id: 8,
-      title: "SAP HSM Bootcamp",
-      description: "Get intensive, hands-on training program on SAP HSM.",
-      instructor: "Mike Johnson",
-      rating: 4.6,
-      price: "$149.99",
-      image: "/images/courseImg8.jpeg",
+      title: "SAP FICO Bootcamp",
+      description: [
+        "AP FI Configuration Package",
+        "SAP CO Configuration Package",
+        "SAP Product Costing Package",
+        "SAP Project Systems Package",
+        "SAP Intercompay Package",
+        "SAP Market Class Package",
+        "SAP Job Strategy Package",
+      ],
+
+      rating: 4.8,
+      price: "$3500",
+      image: "/images/courseImg9.jpeg",
     },
     {
       id: 9,
-      title: "SAP HANA Essentials",
-      description:
-        "Get hands-on experience with SAP HANA database and analytics.",
-      instructor: "Mike Johnson",
+      title: "SAP POPM",
+      description: ["(Details to come soon)"],
+
       rating: 4.6,
-      price: "$149.99",
+      price: "$500",
       image: "/images/courseImg1.jpeg",
     },
   ];
@@ -119,9 +174,8 @@ const FeaturedCoursesSection = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl text-[18px] font-medium mx-auto font-inter">
             Explore our most popular SAP courses designed to help you master
-            in-demand skills and advance your career. Whether you&apos;re a
-            beginner or an experienced professional, we have something for
-            everyone.
+            in-demand skills and advance your career. Whether you're a beginner
+            or an experienced professional, we have something for everyone.
           </p>
         </div>
 
@@ -143,48 +197,65 @@ const FeaturedCoursesSection = () => {
                 bulletActiveClass: "swiper-pagination-bullet-active",
               }}
               breakpoints={{
-                640: {
-                  slidesPerView: 1,
-                },
-                768: {
-                  slidesPerView: 2,
-                },
-                1024: {
-                  slidesPerView: 3,
-                },
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
               }}
             >
               {courses.map((course) => (
                 <SwiperSlide key={course.id}>
-                  <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-                    <div className="w-full h-48 relative">
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden h-[650px] flex flex-col group">
+                    <div className="w-full h-[200px] relative">
                       <Image
                         src={course.image}
                         alt={course.title}
-                        fill
-                        className="object-cover"
+                        width={320}
+                        height={200}
+                        className="object-cover w-full h-full"
                         loading="lazy"
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                       />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">
+                    <div className="p-6 flex flex-col h-full relative">
+                      <h3 className="text-xl font-semibold mb-2 line-clamp-2">
                         {course.title}
                       </h3>
-                      <p className="text-gray-600 mb-4">{course.description}</p>
-                      <div className="flex items-center mb-4">
-                        <span className="text-yellow-400 mr-2">★★★★☆</span>
-                        <span className="text-gray-600">({course.rating})</span>
+                      <ul className="text-gray-600 mb-4 space-y-1 flex-1 min-h-[150px] overflow-hidden">
+                        {course.description.slice(0, 5).map((item, index) => (
+                          <li key={index} className="text-sm">
+                            • {item}
+                          </li>
+                        ))}
+                      </ul>
+                      {/* Hover overlay for full description */}
+                      <div
+                        className="absolute top-0 left-0 right-0 bg-white p-6 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex flex-col justify-start z-10 overflow-y-auto pointer-events-none"
+                        style={{ bottom: "150px" }}
+                      >
+                        <h3 className="text-xl font-semibold mb-2">
+                          {course.title}
+                        </h3>
+                        <ul className="text-gray-600 space-y-1">
+                          {course.description.map((item, index) => (
+                            <li key={index} className="text-sm">
+                              • {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <p className="text-gray-600 mb-4">
-                        Instructor: {course.instructor}
-                      </p>
-                      <p className="text-lg font-bold text-blue-600 mb-4">
-                        {course.price}
-                      </p>
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
-                        Enroll Now
-                      </button>
+                      <div className="mt-auto flex-shrink-0 relative z-20">
+                        <div className="flex items-center mb-4">
+                          <span className="text-yellow-400 mr-2">★★★★☆</span>
+                          <span className="text-gray-600">
+                            ({course.rating})
+                          </span>
+                        </div>
+                        <p className="text-lg font-bold text-blue-600 mb-4">
+                          {course.price}
+                        </p>
+                        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                          Enroll Now
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </SwiperSlide>

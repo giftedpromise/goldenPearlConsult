@@ -8,7 +8,7 @@ const PricingPlansSection = () => {
     {
       id: 1,
       name: "Monthly Subscription",
-      price: "$29.99/month",
+
       description: "Perfect for learners who want flexibility.",
       features: [
         "Access to all courses",
@@ -22,7 +22,7 @@ const PricingPlansSection = () => {
     {
       id: 2,
       name: "Annual Subscription",
-      price: "$299.99/year",
+
       description: "Best value for long-term learners.",
       features: [
         "Access to all courses",
@@ -38,7 +38,7 @@ const PricingPlansSection = () => {
     {
       id: 3,
       name: "One-Time Payment",
-      price: "$499.99",
+
       description: "Lifetime access to all current and future courses.",
       features: [
         "Access to all courses",
@@ -84,7 +84,7 @@ const PricingPlansSection = () => {
               {/* Plan Name */}
               <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
               {/* Plan Price */}
-              <p className="text-3xl font-semibold mb-4">{plan.price}</p>
+
               {/* Plan Description */}
               <p className="text-gray-600 mb-6">{plan.description}</p>
               {/* Plan Features */}

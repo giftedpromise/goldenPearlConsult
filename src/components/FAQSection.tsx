@@ -21,62 +21,136 @@ interface QuestionState {
 const FAQSection: React.FC = () => {
   const faqs: FAQ[] = [
     {
-      category: "Getting Started",
+      category: "General Questions",
       questions: [
         {
-          question: "Do I need prior experience to learn SAP?",
+          question: "What is Golden Pearl Consulting?",
           answer:
-            "No, prior SAP experience is not required for our beginner courses. We start with fundamental concepts and gradually progress to more advanced topics. However, basic computer literacy and understanding of business processes can be helpful.",
+            "Golden Pearl Consulting is a leading provider of SAP training programs designed to empower professionals and organizations with the skills needed to excel in SAP solutions, including SAP S/4HANA, SAP FICO, and more.",
         },
         {
-          question: "What is the duration of the courses?",
+          question: "Who can benefit from your SAP training programs?",
           answer:
-            "Course duration varies by module and learning path: Foundation courses (4-6 weeks), Specialized modules (6-8 weeks), and Complete certification tracks (3-6 months). You can learn at your own pace, as all course materials remain accessible after enrollment.",
+            "Our programs are tailored for beginners, experienced professionals, finance and accounting experts, IT and business analysts, project managers, and consultants looking to upskill or start a career in SAP.",
+        },
+        {
+          question: "What SAP training programs do you offer?",
+          answer:
+            "We specialize in SAP S/4HANA Finance (FICO), SAP Controlling (CO), and SAP Activate Methodology & Agile Project Management.",
+        },
+        {
+          question:
+            "Do you offer training for beginners with no prior SAP experience?",
+          answer:
+            "Yes, our training programs cater to individuals at all levels, including beginners who want to start a career in SAP.",
         },
       ],
     },
     {
-      category: "Course Details",
+      category: "Training Details",
       questions: [
         {
-          question: "Which SAP module should I start with?",
+          question: "What is the duration of your SAP training programs?",
           answer:
-            "We recommend beginning with SAP S/4HANA Fundamentals if you're new to SAP. For those with a specific career goal, popular starting points include SAP FICO for finance, SAP MM for procurement, SAP SD for sales, and SAP HCM for HR professionals.",
+            "The duration varies depending on the program and learning mode (online, on-site, or self-paced). Please get in touch with us for specific details.",
         },
         {
-          question: "What technical requirements do I need?",
+          question: "Do you provide hands-on training?",
           answer:
-            "You'll need a modern web browser, 8GB RAM recommended, broadband internet connection (minimum 5 Mbps), and screen resolution of 1280x800 or higher.",
+            "Our training includes real-world case studies, live projects, and interactive sessions to ensure practical, hands-on learning.",
+        },
+        {
+          question:
+            "Are your training programs aligned with industry standards?",
+          answer:
+            " Absolutely. Our curriculum is designed to align with industry best practices and current SAP market demands.",
+        },
+        {
+          question: "What are the learning options available?",
+          answer:
+            "We offer flexible learning options, including online, on-site, and self-paced training to suit your schedule and learning style.",
         },
       ],
     },
     {
-      category: "Support & Access",
+      category: "Certification and Career Support",
       questions: [
         {
-          question: "What kind of support is available?",
+          question: "Do you help with SAP certification preparation?",
           answer:
-            "We provide 24/7 technical support, expert instructor assistance during business hours, community forum access, weekly live Q&A sessions, and private discussion groups for each course.",
+            "We assist with SAP certification preparation, including study materials and practice exams.",
         },
         {
-          question: "Can I access materials after completion?",
+          question: "Do you offer job placement assistance?",
           answer:
-            "Yes, you maintain lifetime access to all course materials including video lectures, practice exercises, documentation, case studies, and content updates.",
+            "Yes, we offer career support, including resume building, interview preparation, and job placement assistance to help you land your dream SAP role.",
+        },
+        {
+          question:
+            "Will I receive a certificate after completing the training?",
+          answer:
+            "Yes, you will receive a certificate of completion from Golden Pearl Consulting after successfully finishing the training program.",
         },
       ],
     },
     {
-      category: "Refund Policy",
+      category: "Enrollment and Fees",
       questions: [
         {
-          question: "What is your refund policy?",
+          question: "How can I enroll in your SAP training programs?",
           answer:
-            "We offer a 30-day money-back guarantee with a full refund if requested within first 14 days (no questions asked). Refunds are available if less than 30% of course content is completed. Processing time is 5-7 business days.",
+            "You can enroll by contacting us via email at info@goldenpearlconsulting.com or by calling 281-922-8669.",
         },
         {
-          question: "How do I request a refund?",
+          question: "What is the cost of your SAP training programs?",
           answer:
-            "Simply log into your student dashboard, go to 'Billing & Payments', click 'Request Refund', and complete the refund request form. Our team will process your request within 5-7 business days.",
+            "The cost varies depending on the program and learning mode. Please reach out to us for detailed pricing information.",
+        },
+        {
+          question: "Do you offer discounts or payment plans?",
+          answer:
+            "We occasionally offer discounts and flexible payment plans. Contact us for more details.",
+        },
+      ],
+    },
+    {
+      category: "Technical and Support Questions",
+      questions: [
+        {
+          question: "What are the technical requirements for online training?",
+          answer:
+            "You will need a stable internet connection, a computer or laptop, and access to SAP software (we provide guidance on setting this up).",
+        },
+        {
+          question: "Can I access training materials after the course ends?",
+          answer:
+            "Yes, you will have access to course materials for a specified period after completing the training.",
+        },
+        {
+          question: "What if I miss a live session?",
+          answer:
+            "Recordings of live sessions are typically provided for online training, so you can catch up at your convenience.",
+        },
+      ],
+    },
+
+    {
+      category: "Corporate Training",
+      questions: [
+        {
+          question: "Do you offer corporate training for organizations?",
+          answer:
+            "Yes, we provide customized SAP training programs for organizations to upskill their teams and optimize business processes.",
+        },
+        {
+          question: "Can training be conducted on-site for corporate clients?",
+          answer:
+            "Yes, we offer on-site training options for corporate clients based on their requirements.",
+        },
+        {
+          question: "How do you tailor training for corporate needs?",
+          answer:
+            "We work closely with organizations to understand their goals and customize the curriculum to meet their specific business needs.",
         },
       ],
     },
