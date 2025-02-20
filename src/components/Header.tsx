@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -7,6 +8,7 @@ import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter(); // Initialize Next.js router
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -25,8 +27,8 @@ const Header = () => {
               <Image
                 src="/images/logo.png"
                 alt="Leeds Institute"
-                width={500} // Increase the width
-                height={82} // Increase the height
+                width={500}
+                height={82}
                 className="h-20 w-auto"
                 priority
               />
@@ -50,21 +52,18 @@ const Header = () => {
 
           {/* Get Started Button */}
           <div className="hidden md:block">
-            <Link
-              href="/get-started"
+            <button
+              onClick={() => router.push("/login")} // Use router.push() for navigation
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-[16px] lg:text-[18px] font-medium hover:bg-blue-700 transition-colors"
             >
               Get Started
-            </Link>
+            </button>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => {
-                setIsMenuOpen((prev) => !prev);
-                console.log("Menu Open:", !isMenuOpen);
-              }}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
               className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
             >
               {isMenuOpen ? (
@@ -98,13 +97,15 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/get-started"
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  router.push("/login"); // Navigate and close menu
+                }}
                 className="block w-52 text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Get Started
-              </Link>
+              </button>
             </div>
           </motion.div>
         )}
