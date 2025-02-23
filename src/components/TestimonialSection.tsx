@@ -17,7 +17,7 @@ const testimonials = [
     role: "Project Manager",
     company: "Global Systems GmbH",
     content:
-      "Outstanding learning experience! The platform&apos;s interactive approach and real-world scenarios made it easy to understand SAP&apos;s ecosystem.",
+      "Outstanding learning experience! The platform's interactive approach and real-world scenarios made it easy to understand SAP's ecosystem.",
     rating: 5,
   },
   {
@@ -35,7 +35,7 @@ const testimonials = [
     role: "SAP Developer",
     company: "Digital Innovations Ltd",
     content:
-      "The hands-on labs and real-world projects helped me understand complex SAP concepts. The platform&apos;s approach to teaching made learning enjoyable and effective.",
+      "The hands-on labs and real-world projects helped me understand complex SAP concepts. The platform's approach to teaching made learning enjoyable and effective.",
     rating: 5,
   },
 ];
@@ -45,7 +45,7 @@ const TestimonialSection = () => {
     <section className="py-12 bg-gray-50">
       <div className="max-w-5xl mx-auto px-4 md:px-10 lg:px-[80px]">
         <div className="text-center mb-8">
-          <h2 className="text-[48px] font-bold font-[Gilroy-Bold] text-gray-800  mb-3">
+          <h2 className="text-[48px] font-bold font-[Gilroy-Bold] text-gray-800 mb-3">
             What Our Learners Say
           </h2>
           <p className="text-lg font-inter text-gray-600">
@@ -54,7 +54,6 @@ const TestimonialSection = () => {
             education
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {testimonials.map((testimonial) => (
             <div
@@ -62,11 +61,9 @@ const TestimonialSection = () => {
               className="bg-white rounded-lg shadow-md p-5 transition-transform duration-300 hover:scale-105"
             >
               <Quote className="text-blue-600 mb-3 h-6 w-6" />
-
               <p className="text-gray-700 font-inter italic text-sm mb-4">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
-
               <div className="flex mb-3">
                 {[...Array(5)].map((_, index) => (
                   <StarIcon
@@ -80,7 +77,6 @@ const TestimonialSection = () => {
                   />
                 ))}
               </div>
-
               <div className="border-t pt-3">
                 <h3 className="font-semibold text-base font-inter text-gray-900">
                   {testimonial.name}
