@@ -17,7 +17,7 @@ const testimonials = [
     role: "Project Manager",
     company: "Global Systems GmbH",
     content:
-      "Outstanding learning experience! The platform's interactive approach and real-world scenarios made it easy to understand SAP's ecosystem.",
+      "Outstanding learning experience! The platform&apos;s interactive approach and real-world scenarios made it easy to understand SAP&apos;s ecosystem.",
     rating: 5,
   },
   {
@@ -35,7 +35,7 @@ const testimonials = [
     role: "SAP Developer",
     company: "Digital Innovations Ltd",
     content:
-      "The hands-on labs and real-world projects helped me understand complex SAP concepts. The platform's approach to teaching made learning enjoyable and effective.",
+      "The hands-on labs and real-world projects helped me understand complex SAP concepts. The platform&apos;s approach to teaching made learning enjoyable and effective.",
     rating: 5,
   },
 ];
