@@ -51,9 +51,9 @@ const AboutUs = () => {
                     businesses alike.
                   </p>
                   <p className="text-lg text-gray-600 mb-8 font-inter">
-                    Whether you're a beginner looking to enter the SAP ecosystem
-                    or an experienced consultant aiming to advance your
-                    expertise, our tailored training programs cater to all
+                    Whether you&apos;re a beginner looking to enter the SAP
+                    ecosystem or an experienced consultant aiming to advance
+                    your expertise, our tailored training programs cater to all
                     levels of proficiency.
                   </p>
                   <h3 className="text-xl font-semibold font-inter text-gray-800 mb-2">
