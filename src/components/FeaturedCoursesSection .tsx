@@ -174,8 +174,9 @@ const FeaturedCoursesSection = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl text-[18px] font-medium mx-auto font-inter">
             Explore our most popular SAP courses designed to help you master
-            in-demand skills and advance your career. Whether you're a beginner
-            or an experienced professional, we have something for everyone.
+            in-demand skills and advance your career. Whether you&apos;re a
+            beginner or an experienced professional, we have something for
+            everyone.
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -42,8 +42,8 @@ const ContactUs = () => {
             Contact Us
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have questions about our SAP training programs? We're here to help.
-            Reach out to us and we'll respond as soon as possible.
+            Have questions about our SAP training programs? We&apos;re here to
+            help. Reach out to us and we&apos;ll respond as soon as possible.
           </p>
         </div>
 
