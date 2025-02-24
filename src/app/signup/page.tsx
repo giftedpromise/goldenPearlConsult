@@ -1,19 +1,24 @@
-"use client"; 
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc"; 
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
+import { FcGoogle } from "react-icons/fc";
 
-export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false); 
+export default function SignupPage() {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword); 
+    setShowPassword(!showPassword);
   };
 
-  const handleGoogleSignIn = () => {
-    console.log("Signing in with Google...");
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+
+  const handleGoogleSignUp = () => {
+    console.log("Signing up with Google...");
   };
 
   return (
@@ -21,11 +26,11 @@ export default function LoginPage() {
       <div className="flex-1 flex flex-col justify-center px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
-            <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Welcome back</h2>
+            <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Start learning today</h2>
             <p className="mt-2 text-sm text-gray-600">
               Or{" "}
-              <Link href="/signup" className="font-medium text-blue-600 hover:text-blue-500">
-                start your learning journey
+              <Link href="/login" className="font-medium text-blue-600 hover:text-blue-500">
+                sign in to your account
               </Link>
             </p>
           </div>
@@ -33,11 +38,11 @@ export default function LoginPage() {
           <div className="mt-8">
             <div>
               <button
-                onClick={handleGoogleSignIn}
+                onClick={handleGoogleSignUp}
                 className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
-                <FcGoogle className="w-5 h-5 mr-2" /> {/* Google logo */}
-                Sign in with Google
+                <FcGoogle className="w-5 h-5 mr-2" /> 
+                Sign up with Google
               </button>
             </div>
 
@@ -51,6 +56,22 @@ export default function LoginPage() {
             </div>
 
             <form className="mt-6 space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                  Full Name
+                </label>
+                <div className="mt-1">
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                   Email address
@@ -75,8 +96,8 @@ export default function LoginPage() {
                   <input
                     id="password"
                     name="password"
-                    type={showPassword ? "text" : "password"} 
-                    autoComplete="current-password"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="new-password"
                     required
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
@@ -90,23 +111,26 @@ export default function LoginPage() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
+              <div>
+                <label htmlFor="confirm-password" className="block text-sm font-medium text-gray-700">
+                  Confirm Password
+                </label>
+                <div className="mt-1 relative">
                   <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    id="confirm-password"
+                    name="confirm-password"
+                    type={showConfirmPassword ? "text" : "password"}
+                    autoComplete="new-password"
+                    required
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
-                  </label>
-                </div>
-
-                <div className="text-sm">
-                  <a href="#" className="font-medium text-blue-600 hover:text-blue-500">
-                    Forgot your password?
-                  </a>
+                  <button
+                    type="button"
+                    onClick={toggleConfirmPasswordVisibility}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5"
+                  >
+                    {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                  </button>
                 </div>
               </div>
 
@@ -115,7 +139,7 @@ export default function LoginPage() {
                   type="submit"
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
-                  Sign in
+                  Create account
                 </button>
               </div>
             </form>
@@ -125,7 +149,7 @@ export default function LoginPage() {
       <div className="hidden lg:block relative w-0 flex-1">
         <img
           className="absolute inset-0 h-full w-full object-cover"
-          src="https://t3.ftcdn.net/jpg/04/19/37/00/360_F_419370079_ImDG5bLwsTmgnBOnLDsMWNyXfa33n34v.jpg"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
           alt="Students collaborating"
         />
         <div className="absolute inset-0 bg-gray-900 mix-blend-multiply opacity-60"></div>
