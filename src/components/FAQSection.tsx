@@ -233,7 +233,7 @@ const FAQSection: React.FC = () => {
                         : "max-h-0 opacity-0"
                     } overflow-hidden`}
                   >
-                    <p className="px-6 py-4 font-inter text-gray-600">
+                    <p className="px-6 py-4 font-inter text-base font-normal text-gray-700 bg-gray-100 border-t border-gray-200">
                       {item.answer}
                     </p>
                   </div>

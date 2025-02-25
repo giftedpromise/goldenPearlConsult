@@ -16,6 +16,7 @@ const FeaturedCoursesSection = () => {
     description: string[];
     rating: number;
     price: string;
+    formerPrice: string;
     image: string;
     instructor?: string;
   }
@@ -24,7 +25,6 @@ const FeaturedCoursesSection = () => {
     {
       id: 1,
       title: "SAP FI Configuration",
-
       description: [
         "Hands on Configuration",
         "Self-Paced Learning",
@@ -32,6 +32,7 @@ const FeaturedCoursesSection = () => {
       ],
       rating: 4.7,
       price: "$500",
+      formerPrice: "$650",
       image: "/images/courseImg9.jpeg",
     },
     {
@@ -42,9 +43,9 @@ const FeaturedCoursesSection = () => {
         "Basic Product Costing Exposure",
         "Self-Paced Learning",
       ],
-
       rating: 4.8,
       price: "$500",
+      formerPrice: "",
       image: "/images/courseImg2.jpeg",
     },
     {
@@ -59,6 +60,7 @@ const FeaturedCoursesSection = () => {
       ],
       rating: 4.6,
       price: "$500",
+      formerPrice: "",
       image: "/images/SapProduct.PNG",
     },
     {
@@ -74,6 +76,7 @@ const FeaturedCoursesSection = () => {
 
       rating: 4.6,
       price: "$499",
+      formerPrice: "",
       image: "/images/SAPProject.jpg",
     },
     {
@@ -92,6 +95,7 @@ const FeaturedCoursesSection = () => {
 
       rating: 4.6,
       price: "$699",
+      formerPrice: "",
       image: "/images/SAPintercompany.jpg",
     },
     {
@@ -109,6 +113,7 @@ const FeaturedCoursesSection = () => {
 
       rating: 4.6,
       price: "$700",
+      formerPrice: "",
       image: "/images/SAPMarket.jpg",
     },
     {
@@ -125,6 +130,7 @@ const FeaturedCoursesSection = () => {
       ],
       rating: 4.6,
       price: "$999",
+      formerPrice: "",
       image: "/images/SAPJob.jpg",
     },
     {
@@ -142,6 +148,7 @@ const FeaturedCoursesSection = () => {
 
       rating: 4.8,
       price: "$3500",
+      formerPrice: "$4148",
       image: "/images/courseImg9.jpeg",
     },
     {
@@ -151,6 +158,7 @@ const FeaturedCoursesSection = () => {
 
       rating: 4.6,
       price: "$500",
+      formerPrice: "",
       image: "/images/courseImg1.jpeg",
     },
   ];
@@ -161,7 +169,6 @@ const FeaturedCoursesSection = () => {
     const timer = setTimeout(() => {
       setIsSwiperReady(true);
     }, 100);
-
     return () => clearTimeout(timer);
   }, []);
 
@@ -174,9 +181,7 @@ const FeaturedCoursesSection = () => {
           </h2>
           <p className="text-gray-600 max-w-2xl text-[18px] font-medium mx-auto font-inter">
             Explore our most popular SAP courses designed to help you master
-            in-demand skills and advance your career. Whether you&apos;re a
-            beginner or an experienced professional, we have something for
-            everyone.
+            in-demand skills and advance your career.
           </p>
         </div>
 
@@ -193,9 +198,6 @@ const FeaturedCoursesSection = () => {
               pagination={{
                 clickable: true,
                 el: ".custom-pagination",
-                type: "bullets",
-                bulletClass: "swiper-pagination-bullet",
-                bulletActiveClass: "swiper-pagination-bullet-active",
               }}
               breakpoints={{
                 640: { slidesPerView: 1 },
@@ -205,7 +207,7 @@ const FeaturedCoursesSection = () => {
             >
               {courses.map((course) => (
                 <SwiperSlide key={course.id}>
-                  <div className="bg-white rounded-lg shadow-sm overflow-hidden h-[650px] flex flex-col group">
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden h-[400px] flex flex-col group relative">
                     <div className="w-full h-[200px] relative">
                       <Image
                         src={course.image}
@@ -216,47 +218,58 @@ const FeaturedCoursesSection = () => {
                         loading="lazy"
                       />
                     </div>
-                    <div className="p-6 flex flex-col h-full relative">
-                      <h3 className="text-xl font-semibold mb-2 line-clamp-2">
+                    <div className="p-4 flex flex-col flex-1">
+                      <h3 className="text-lg font-semibold font-inter mb-2 line-clamp-2">
                         {course.title}
                       </h3>
-                      <ul className="text-gray-600 mb-4 space-y-1 flex-1 min-h-[150px] overflow-hidden">
-                        {course.description.slice(0, 5).map((item, index) => (
-                          <li key={index} className="text-sm">
+                      <div className="flex items-center mb-2">
+                        <span className="text-yellow-400 mr-2">★★★★☆</span>
+                        <span className="font-inter text-gray-600">
+                          ({course.rating})
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-2 mb-4">
+                        <p className="text-lg font-bold font-inter text-blue-600">
+                          {course.price}
+                        </p>
+                        <p className="text-[16px] font-inter text-gray-600 line-through">
+                          {course.formerPrice}
+                        </p>
+                      </div>
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300 mt-auto">
+                        Enroll Now
+                      </button>
+                    </div>
+
+                    {/* Hover overlay without image */}
+                    <div className="absolute inset-0 bg-white p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col z-10">
+                      <h3 className="text-lg font-inter font-semibold mb-2">
+                        {course.title}
+                      </h3>
+                      <ul className="text-gray-600 mb-4 space-y-1 flex-1 overflow-y-auto">
+                        {course.description.map((item, index) => (
+                          <li key={index} className=" font-inter text-sm">
                             • {item}
                           </li>
                         ))}
                       </ul>
-                      {/* Hover overlay for full description */}
-                      <div
-                        className="absolute top-0 left-0 right-0 bg-white p-6 opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex flex-col justify-start z-10 overflow-y-auto pointer-events-none"
-                        style={{ bottom: "150px" }}
-                      >
-                        <h3 className="text-xl font-semibold mb-2">
-                          {course.title}
-                        </h3>
-                        <ul className="text-gray-600 space-y-1">
-                          {course.description.map((item, index) => (
-                            <li key={index} className="text-sm">
-                              • {item}
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="flex items-center mb-2">
+                        <span className="text-yellow-400 mr-2">★★★★☆</span>
+                        <span className="text-gray-600 font-inter">
+                          ({course.rating})
+                        </span>
                       </div>
-                      <div className="mt-auto flex-shrink-0 relative z-20">
-                        <div className="flex items-center mb-4">
-                          <span className="text-yellow-400 mr-2">★★★★☆</span>
-                          <span className="text-gray-600">
-                            ({course.rating})
-                          </span>
-                        </div>
-                        <p className="text-lg font-bold text-blue-600 mb-4">
+                      <div className="flex items-center space-x-2 mb-4">
+                        <p className="text-lg font-bold font-inter text-blue-600">
                           {course.price}
                         </p>
-                        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
-                          Enroll Now
-                        </button>
+                        <p className="text-[16px] font-inter text-gray-600 line-through">
+                          {course.formerPrice}
+                        </p>
                       </div>
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Enroll Now
+                      </button>
                     </div>
                   </div>
                 </SwiperSlide>

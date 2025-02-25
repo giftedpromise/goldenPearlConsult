@@ -6,14 +6,18 @@ import WhoShouldJoinSection from "@/components/WhoShouldJoinSection";
 const AboutUs = () => {
   return (
     <section className="overflow-x-hidden">
-      <div className="relative h-[600px] flex items-center justify-center lg:px-[80px] md:px-10 px-4">
+      <div className="relative h-[800px] flex items-center justify-center lg:px-[80px] md:px-10 px-4">
         {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/AbtHero.jpeg')" }}
-        >
+        <div className="absolute inset-0">
+          <Image
+            src="/images/abtImg.JPG"
+            alt="About Hero Background"
+            layout="fill"
+            objectFit="cover" // or "contain" to show full image
+            className="z-0"
+          />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black opacity-60"></div>
+          <div className="absolute inset-0 bg-black opacity-70 z-10"></div>
         </div>
 
         {/* Content */}
