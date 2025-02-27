@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation"; // Import useRouter
+import { useRouter } from "next/navigation"; // Correct import for App Router
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
@@ -53,7 +53,7 @@ const Header = () => {
           {/* Get Started Button */}
           <div className="hidden md:block">
             <button
-              onClick={() => router.push("/login")} // Use router.push() for navigation
+              onClick={() => router.push("/login")}
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-[16px] lg:text-[18px] font-medium hover:bg-blue-700 transition-colors"
             >
               Get Started
@@ -100,7 +100,7 @@ const Header = () => {
               <button
                 onClick={() => {
                   setIsMenuOpen(false);
-                  router.push("/login"); // Navigate and close menu
+                  router.push("/login");
                 }}
                 className="block w-52 text-center bg-blue-600 text-white px-4 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
               >
